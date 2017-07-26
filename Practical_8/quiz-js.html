@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="author" content="Yunhao Fu">
+<title>Introduction to JavaScript</title>
+<style type="text/css">
+    p, h1 	 { font-family: Calibri, sans-serif; }
+    p        { font-size: 1em;}
+    h1       { font-size: 1.2em; font-style: italic;}
+</style>
+    
+<script>
+    function clickHandler() {
+         document.getElementById( "para1" ).style.borderColor = document.getElementById("colour").value;
+        document.getElementById( "para1" ).style.borderStyle = document.getElementById("style").value;
+        document.getElementById( "para1" ).style.borderWidth = document.getElementById("size").value;
+    }
+</script>
+</head>
+<body>
+
+    <h1>Introduction to JavaScript</h1>
+    
+    <p id="para1">JavaScript is also known as ECMAScript.</p>
+    
+    <p>Size: 
+    <input type="text" id="size">
+    </p>
+    <p>Style: 
+        <input type="text" id="style">
+    </p>
+    <p>Colour:
+        <input type="text" id="colour">
+    </p>
+    <button type="button" onclick="clickHandler()" value="Change style">Change style</button>
+    
+</body>
+</html>
