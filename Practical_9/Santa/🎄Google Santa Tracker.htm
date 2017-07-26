@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://santatracker.google.com/#village -->
+<html lang="zh-CN" itemscope="itemscope" itemtype="http://schema.org/WebPage" class=" js canvas webgl no-touch cssanimations csstransforms no-csstransforms3d csstransitions svg webaudio pointerevents performance gr__santatracker_google_com"><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style scope="iron-icon">iron-icon {
+  position: relative;
+
+      vertical-align: middle;
+}</style><style scope="iron-icon-1">iron-icon.iron-icon-1 {
+  display:-ms-inline-flexbox;
+      display:-webkit-inline-flex;
+      display:inline-flex;-ms-flex-align:center;
+      -webkit-align-items:center;
+      align-items:center;
+      -ms-flex-pack:center;
+      -webkit-justify-content:center;
+      justify-content:center;
+
+
+      fill:currentcolor;
+
+      stroke:none;
+
+
+      width:24px;
+
+      height:24px;
+}</style><style scope="iron-icon-0">iron-icon.iron-icon-0 {
+  display:-ms-inline-flexbox;
+      display:-webkit-inline-flex;
+      display:inline-flex;-ms-flex-align:center;
+      -webkit-align-items:center;
+      align-items:center;
+      -ms-flex-pack:center;
+      -webkit-justify-content:center;
+      justify-content:center;
+
+
+      fill:currentcolor;
+
+      stroke:none;
+
+
+      width:100%;
+
+      height:100%;
+}</style><style scope="iron-pages">iron-pages {
+  display: block;
+}
+
+iron-pages  > :not(.iron-selected) {
+  display: none !important;
+}</style><style scope="paper-item">paper-item {
+  display: block;
+        padding: 0px 16px;
+}
+
+paper-item:focus {
+  position: relative;
+        outline: 0;
+}
+
+paper-item:focus:before {
+  content: '';
+        background: currentColor;
+        pointer-events: none;
+}</style><style scope="paper-ripple">paper-ripple {
+  display: block;
+        position: absolute;
+        border-radius: inherit;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        
+        pointer-events: none;
+}
+
+paper-ripple[animating] {
+  -webkit-transform: translate(0, 0);
+        transform: translate3d(0, 0, 0);
+}
+
+#background.paper-ripple, #waves.paper-ripple, .wave-container.paper-ripple, .wave.paper-ripple {
+  pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+
+#background.paper-ripple, .wave.paper-ripple {
+  opacity: 0;
+}
+
+#waves.paper-ripple, .wave.paper-ripple {
+  overflow: hidden;
+}
+
+.wave-container.paper-ripple, .wave.paper-ripple {
+  border-radius: 50%;
+}
+
+paper-ripple.circle #background.paper-ripple, paper-ripple.circle #waves.paper-ripple {
+  border-radius: 50%;
+}
+
+paper-ripple.circle .wave-container.paper-ripple {
+  overflow: hidden;
+}</style><style scope="paper-material">paper-material {
+  display: block;
+        position: relative;
+}</style><style scope="paper-fab">paper-fab {
+  display: block;
+        position: relative;
+}
+
+paper-fab {
+  display: inline-block;
+        position: relative;
+        outline: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        user-select: none;
+        cursor: pointer;
+
+        box-sizing: border-box;
+        min-width: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        padding: 16px;
+
+        z-index: 0;
+}
+
+paper-fab[mini] {
+  width: 40px;
+        height: 40px;
+        padding: 8px;
+}</style><style scope="paper-drawer-panel">paper-drawer-panel {
+  display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+}
+
+iron-selector.paper-drawer-panel > #drawer.paper-drawer-panel {
+  position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: white;
+
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+.transition.paper-drawer-panel > #drawer.paper-drawer-panel {
+  transition: -webkit-transform ease-in-out 0.3s, width ease-in-out 0.3s, visibility 0.3s;
+        transition: transform ease-in-out 0.3s, width ease-in-out 0.3s, visibility 0.3s;
+}
+
+.right-drawer.paper-drawer-panel > #drawer.paper-drawer-panel {
+  left: auto;
+        right: 0;
+}
+
+iron-selector.paper-drawer-panel > #main.paper-drawer-panel {
+  position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+}
+
+.transition.paper-drawer-panel > #main.paper-drawer-panel {
+  transition: left ease-in-out 0.3s, padding ease-in-out 0.3s;
+}
+
+.right-drawer.paper-drawer-panel > #main.paper-drawer-panel {
+  left: 0;
+}
+
+.right-drawer.transition.paper-drawer-panel > #main.paper-drawer-panel {
+  transition: right ease-in-out 0.3s, padding ease-in-out 0.3s;
+}
+
+#main.paper-drawer-panel  > [main] {
+  height: 100%;
+}
+
+#drawer.paper-drawer-panel  > [drawer] {
+  height: 100%;
+}
+
+#scrim.paper-drawer-panel {
+  position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity ease-in-out 0.38s, visibility ease-in-out 0.38s;
+        background-color: rgba(0, 0, 0, 0.3);
+}
+
+.narrow-layout.paper-drawer-panel > #drawer.paper-drawer-panel {
+  will-change: transform;
+}
+
+.narrow-layout.paper-drawer-panel > #drawer.iron-selected.paper-drawer-panel {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.right-drawer.narrow-layout.paper-drawer-panel > #drawer.iron-selected.paper-drawer-panel {
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.narrow-layout.paper-drawer-panel > #drawer.paper-drawer-panel  > [drawer] {
+  border: 0;
+}
+
+.left-drawer.narrow-layout.paper-drawer-panel > #drawer.paper-drawer-panel:not(.iron-selected) {
+  -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+}
+
+.right-drawer.narrow-layout.paper-drawer-panel > #drawer.paper-drawer-panel:not(.iron-selected) {
+  left: auto;
+        visibility: hidden;
+
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+}
+
+.right-drawer.narrow-layout.dragging.paper-drawer-panel > #drawer.paper-drawer-panel:not(.iron-selected), .right-drawer.narrow-layout.peeking.paper-drawer-panel > #drawer.paper-drawer-panel:not(.iron-selected) {
+  visibility: visible;
+}
+
+.narrow-layout.paper-drawer-panel > #main.paper-drawer-panel {
+  padding: 0;
+}
+
+.right-drawer.narrow-layout.paper-drawer-panel > #main.paper-drawer-panel {
+  left: 0;
+        right: 0;
+}
+
+.narrow-layout.paper-drawer-panel > #main.paper-drawer-panel:not(.iron-selected) > #scrim.paper-drawer-panel, .dragging.paper-drawer-panel > #main.paper-drawer-panel > #scrim.paper-drawer-panel {
+  visibility: visible;
+}
+
+.narrow-layout.paper-drawer-panel > #main.paper-drawer-panel > *.paper-drawer-panel {
+  margin: 0;
+        min-height: 100%;
+        left: 0;
+        right: 0;
+
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+iron-selector.paper-drawer-panel:not(.narrow-layout) #main.paper-drawer-panel  [paper-drawer-toggle] {
+  display: none;
+}</style><style scope="paper-drawer-panel-0">.paper-drawer-panel-0 iron-selector.paper-drawer-panel > #drawer.paper-drawer-panel {
+  z-index:1001;
+}
+
+.paper-drawer-panel-0 #scrim.paper-drawer-panel {
+  background:rgba(135, 212, 147, 0.33);
+      z-index:1001;
+}
+
+.paper-drawer-panel-0 .narrow-layout.paper-drawer-panel > #main.paper-drawer-panel:not(.iron-selected) > #scrim.paper-drawer-panel,.paper-drawer-panel-0  .dragging.paper-drawer-panel > #main.paper-drawer-panel > #scrim.paper-drawer-panel {
+  opacity:1;
+}</style><style scope="paper-header-panel">paper-header-panel {
+  position: relative;
+        height: 100%;
+}
+
+#mainContainer.paper-header-panel {
+  position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+}
+
+#mainPanel.paper-header-panel {
+  position: relative;
+        min-height: 0;
+}
+
+paper-header-panel[mode=scroll] #mainContainer.paper-header-panel {
+  overflow: visible;
+}
+
+paper-header-panel[mode=scroll] {
+  overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+}
+
+paper-header-panel[mode=cover] #mainContainer.paper-header-panel {
+  position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+}
+
+paper-header-panel[mode=cover] #mainPanel.paper-header-panel {
+  position: static;
+}
+
+#dropShadow.paper-header-panel {
+  position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        pointer-events: none;
+
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+
+        opacity: 0;
+}
+
+#dropShadow.has-shadow.paper-header-panel {
+  opacity: 1;
+}</style><style scope="paper-header-panel-0">paper-header-panel.paper-header-panel-0 {
+  display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:column;
+      -webkit-flex-direction:column;
+      flex-direction:column;
+}
+
+.paper-header-panel-0 #mainContainer.paper-header-panel {
+  -ms-flex:1 1 0.000000001px;
+      -webkit-flex:1;
+      flex:1;
+      -webkit-flex-basis:0.000000001px;
+      flex-basis:0.000000001px;
+}
+
+.paper-header-panel-0 #mainPanel.paper-header-panel {
+  display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:column;
+      -webkit-flex-direction:column;
+      flex-direction:column;-ms-flex:1 1 0.000000001px;
+      -webkit-flex:1;
+      flex:1;
+      -webkit-flex-basis:0.000000001px;
+      flex-basis:0.000000001px;
+}
+
+paper-header-panel.paper-header-panel-0[mode=waterfall] #mainContainer.paper-header-panel {
+  will-change:transform;
+}
+
+.paper-header-panel-0 #dropShadow.paper-header-panel {
+  display:none;
+}</style><style scope="paper-icon-button">paper-icon-button {
+  display: inline-block;
+        position: relative;
+        padding: 8px;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        z-index: 0;
+        line-height: 1;
+        
+        width: 40px;
+        height: 40px;
+
+        
+        box-sizing: border-box !important;
+}
+
+paper-icon-button #ink.paper-icon-button {
+  opacity: 0.6;
+}
+
+paper-icon-button[disabled] {
+  pointer-events: none;
+        cursor: auto;
+}</style><style scope="paper-icon-button-0">paper-icon-button.paper-icon-button-0 #ink.paper-icon-button {
+  color:white;
+}
+
+paper-icon-button.paper-icon-button-0[disabled] {
+  color:#bdbdbd;
+}</style><style scope="paper-toolbar">paper-toolbar {
+  display: block;
+        position: relative;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+}
+
+paper-toolbar.animate {
+  transition: height 0.18s ease-in;
+}
+
+.toolbar-tools.paper-toolbar {
+  position: relative;
+        padding: 0 16px;
+        pointer-events: none;
+}
+
+#topBar.paper-toolbar {
+  position: relative;
+}
+
+#middleBar.paper-toolbar {
+  position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+}
+
+paper-toolbar.tall #middleBar.paper-toolbar, paper-toolbar.medium-tall #middleBar.paper-toolbar {
+  -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+}
+
+#bottomBar.paper-toolbar {
+  position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+}
+
+.toolbar-tools.paper-toolbar  > *:not([disabled]) {
+  pointer-events: auto;
+}
+
+.toolbar-tools.paper-toolbar  .title {
+  white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+        pointer-events: none;
+}
+
+.toolbar-tools.paper-toolbar  paper-icon-button[icon=menu] {
+  margin-right: 24px;
+}
+
+.toolbar-tools.paper-toolbar  > .title, .toolbar-tools.paper-toolbar [select=".middle"] > .title, .toolbar-tools.paper-toolbar [select=".bottom"] > .title {
+  margin-left: 56px;
+}
+
+.toolbar-tools.paper-toolbar  > paper-icon-button + .title, .toolbar-tools.paper-toolbar [select=".middle"] paper-icon-button + .title, .toolbar-tools.paper-toolbar [select=".bottom"] paper-icon-button + .title {
+  margin-left: 0;
+}
+
+.toolbar-tools.paper-toolbar  > .fit {
+  position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        margin: 0;
+}</style><style scope="paper-toolbar-0">paper-toolbar.paper-toolbar-0 {
+  height:56px;
+
+
+        background:#3f51b5;
+
+        color:#ffffff;
+}
+
+paper-toolbar.paper-toolbar-0.medium-tall {
+  height:calc(56px * 2);
+}
+
+paper-toolbar.paper-toolbar-0.tall {
+  height:calc(56px * 3);
+}
+
+.paper-toolbar-0 .toolbar-tools.paper-toolbar {
+  height:56px;display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:row;
+      -webkit-flex-direction:row;
+      flex-direction:row;-ms-flex-align:center;
+      -webkit-align-items:center;
+      align-items:center;
+}
+
+@media (max-width: 639px) {
+paper-toolbar.paper-toolbar-0 {
+  height:56px;
+}
+
+paper-toolbar.paper-toolbar-0.medium-tall {
+  height:calc(56px * 2);
+}
+
+paper-toolbar.paper-toolbar-0.tall {
+  height:calc(56px * 3);
+}
+
+.paper-toolbar-0 .toolbar-tools.paper-toolbar {
+  height:56px;
+}
+
+}
+
+.paper-toolbar-0 .toolbar-tools.paper-toolbar  .title {
+  font-family:'Roboto', 'Noto', sans-serif;
+      -webkit-font-smoothing:antialiased;-ms-flex:1 1 0.000000001px;
+      -webkit-flex:1;
+      flex:1;
+      -webkit-flex-basis:0.000000001px;
+      flex-basis:0.000000001px;
+}
+
+.paper-toolbar-0 .start-justified.paper-toolbar {
+  -ms-flex-pack:start;
+      -webkit-justify-content:flex-start;
+      justify-content:flex-start;
+}
+
+.paper-toolbar-0 .center-justified.paper-toolbar {
+  -ms-flex-pack:center;
+      -webkit-justify-content:center;
+      justify-content:center;
+}
+
+.paper-toolbar-0 .end-justified.paper-toolbar {
+  -ms-flex-pack:end;
+      -webkit-justify-content:flex-end;
+      justify-content:flex-end;
+}
+
+.paper-toolbar-0 .around-justified.paper-toolbar {
+  -ms-flex-pack:around;
+      -webkit-justify-content:space-around;
+      justify-content:space-around;
+}
+
+.paper-toolbar-0 .justified.paper-toolbar {
+  -ms-flex-pack:justify;
+      -webkit-justify-content:space-between;
+      justify-content:space-between;
+}</style><style scope="santa-chrome">paper-toolbar.santa-chrome {
+  z-index: 1001;
+}
+
+paper-toolbar.santa-chrome   .toolbar-tools {
+  padding-left: 8px;
+    padding-right: 16px;
+}
+
+paper-header-panel.santa-chrome   #mainContainer {
+  will-transform: opacity;
+    transform: translateZ(0);
+}
+
+paper-header-panel.fixed.santa-chrome   #mainContainer {
+  overflow: hidden !important;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+santa-chrome[mode="portal"] .shareicons.santa-chrome {
+  display: none !important;
+}
+
+santa-chrome[mode="cast"] paper-header-panel.santa-chrome   #mainContainer {
+  overflow: hidden !important;
+}
+
+santa-chrome[mode="cast"] #sound.santa-chrome {
+  display: none;
+}
+
+santa-chrome[mode="portal"] .links.santa-chrome.santa-chrome {
+  display: none !important;
+}
+
+santa-chrome[mode="portal"] .lang.santa-chrome.santa-chrome {
+  display: none !important;
+}
+
+santa-chrome[mode="portal"] #sound.santa-chrome {
+  top: 100px;
+}</style><style scope="santa-chrome-0">.santa-chrome-0 paper-header-panel.santa-chrome  #mainPanel {
+  position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+}
+
+.santa-chrome-0 .scroll.santa-chrome {
+  -webkit-overflow-scrolling:touch;
+      overflow:auto;
+}
+
+.santa-chrome-0 .flex.santa-chrome {
+  -ms-flex:1 1 0.000000001px;
+      -webkit-flex:1;
+      flex:1;
+      -webkit-flex-basis:0.000000001px;
+      flex-basis:0.000000001px;
+}</style><style scope="preload-overlay">#page-progress.preload-overlay {
+  height:100%;margin:-80px
+}
+
+.preload-bar.preload-overlay {
+  width:240px;margin:-40px auto;background-color:rgba(255,255,255,0.2);border-radius:20px;overflow:hidden
+}
+
+.preload-progress.preload-overlay {
+  height:20px;background-image:-webkit-linear-gradient(315deg, #ea4537 25%, #fff 25%, #fff 50%, #ea4537 50%, #ea4537 75%, #fff 75%, #fff);background-image:linear-gradient(135deg, #ea4537 25%, #fff 25%, #fff 50%, #ea4537 50%, #ea4537 75%, #fff 75%, #fff);background-size:30px 30px;border-radius:inherit;-webkit-animation:animate-stripes 3s linear infinite;animation:animate-stripes 3s linear infinite
+}
+
+@-webkit-keyframes animate-stripes {
+0% {
+  background-position:0 0
+}
+
+100% {
+  background-position:60px 0
+}
+
+}
+
+@keyframes animate-stripes {
+0% {
+  background-position:0 0
+}
+
+100% {
+  background-position:60px 0
+}
+
+}
+
+preload-overlay {
+  background: #3ec4f0;
+        z-index: 1200;
+}
+
+img.preload-overlay {
+  width: 340px;
+        height: 340px;
+}
+
+preload-overlay {
+  visibility: hidden;
+}
+
+preload-overlay.fading {
+  transition: opacity 600ms ease-in-out;
+        opacity: 0;
+        visibility: visible;
+}
+
+preload-overlay[active] {
+  visibility: visible;
+}</style><style scope="preload-overlay-0">@-webkit-keyframes animate-stripes {
+0% {
+  background-position:0 0
+}
+
+100% {
+  background-position:60px 0
+}
+
+}
+
+@keyframes animate-stripes {
+0% {
+  background-position:0 0
+}
+
+100% {
+  background-position:60px 0
+}
+
+}
+
+preload-overlay.preload-overlay-0 {
+  position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+}
+
+.preload-overlay-0 #page-progress.preload-overlay {
+  display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:column;
+      -webkit-flex-direction:column;
+      flex-direction:column;-ms-flex-align:center;
+      -webkit-align-items:center;
+      align-items:center;
+      -ms-flex-pack:center;
+      -webkit-justify-content:center;
+      justify-content:center;
+}</style><style scope="lazy-pages">lazy-pages {
+  position: static;
+        display: block;
+}
+
+lazy-pages  > * {
+  position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+}
+
+lazy-pages  > :focus {
+  outline: none;
+}
+
+lazy-pages  > :not(.iron-selected) {
+  display: none !important;
+}</style><style scope="countdown-timer">countdown-timer {
+  display: block;
+        will-change: transform;
+        transform: translateZ(0);
+}</style><style scope="countdown-timer-0">.countdown-timer-0 #counter.countdown-timer {
+  display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:row;
+      -webkit-flex-direction:row;
+      flex-direction:row;
+}</style><style scope="dorf-scene">dorf-scene[mode="cast"] #header-content.dorf-scene p.dorf-scene {
+  display: none;
+}
+
+dorf-scene[mode="cast"] #eastereggs.dorf-scene *.dorf-scene {
+  background: none !important;
+    display: none !important;
+}
+
+dorf-scene[mode="cast"] .ice.dorf-scene {
+  display: none !important;
+}
+
+dorf-scene[mode="portal"] .launchdate.dorf-scene {
+  display: none !important;
+}
+
+dorf-scene[mode="portal"] .donate-button.dorf-scene {
+  display: none !important;
+}</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+  <meta charset="utf-8">
+  <!--<base href="//maps.gstatic.com/mapfiles/santatracker/v201512241241/">--><base href=".">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+
+  <title>🎄Google Santa Tracker</title>
+  <meta property="og:title" itemprop="name" content="Google Santa Tracker">
+  <meta property="og:url" content="https://santatracker.google.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" itemprop="image" name="thumbnail" content="https://santatracker.google.com/images/og.png">
+  <meta property="og:description" itemprop="description" name="description" content="Use Google Santa Tracker to follow Santa Claus on Google Maps as he makes his journey around the world.">
+
+  <link rel="stylesheet" href="./🎄Google Santa Tracker_files/css">
+  <link rel="stylesheet" href="./🎄Google Santa Tracker_files/santatracker.css">
+
+  <!-- app manifest-->
+  <link rel="manifest" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes"> <!-- fallback -->
+
+  <!-- app status bar themes -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00c6ed">
+  <meta name="theme-color" content="#00c6ed">
+  <meta name="msapplication-TileColor" content="#30B443">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- icons -->
+  <link rel="apple-touch-icon" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/icon-60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/icon-76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/icon-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/icon-152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/icon-167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/icon-180.png">
+  <link id="favicon" rel="shortcut icon" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/favicon-16.png" sizes="16x16">
+  <link id="favicon" rel="shortcut icon" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/favicon-32.png" sizes="32x32">
+  <link id="favicon" rel="shortcut icon" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/favicon-64.png" sizes="64x64">
+  <link id="favicon" rel="shortcut icon" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/images/favicon-96.png" sizes="96x96">
+
+  <!-- Analytics -->
+  <script type="text/javascript" async="" src="./🎄Google Santa Tracker_files/ga.js"></script><script src="./🎄Google Santa Tracker_files/autotrack.js"></script>
+  <script>
+    
+
+    window.ga_ = new gweb.analytics.AutoTrack({
+      'profile': location.hostname == 'santatracker.google.com' ? 'UA-37048309-1' : 'UA-37048309-2',
+      'trackClicks': false,
+      'disableTrackPageview': true
+    });
+
+    /**
+     * @param {string} param URL parameter to look for.
+     * @return {string|undefined} undefined if the URL parameter does not exist.
+     */
+    function getUrlParameter(param) {
+      if (!window.location.search) {
+        return;
+      }
+      var m = new RegExp(param + '=([^&]*)').exec(window.location.search.substring(1));
+      if (!m) {
+        return;
+      }
+      return decodeURIComponent(m[1]);
+    }
+
+    var apiClient = getUrlParameter('api_client');
+    if (apiClient) {
+      ga_.pushCommand(['_setCampSourceKey', 'api_client']);
+      ga_.pushCommand(['_setCampMediumKey', 'api_client']);
+    }
+
+    // Check if browser is supported by web component/Polymer polyfills.
+    // Feature detection isn't sufficient; webcomponentsjs attempts to polyfill
+    // missing features, but some browsers are known to not work under it.
+    // https://www.polymer-project.org/resources/compatibility.html
+    var ignoreCheck = getUrlParameter('ignore_browser_check') == 'true';
+    var supported =  ignoreCheck || (function sniff() {
+      var uaString = navigator.userAgent;
+      // no IE < 11
+      var msie = /MSIE +([\d\.]+)/.exec(uaString);
+      if (msie && msie[1]) {
+        if (msie[1] === '7.0') {
+          var tridentVersion = /Trident\/(\d.\d)/.exec(uaString);
+          if (tridentVersion && tridentVersion[1]) {
+            return parseInt(tridentVersion[1], 10) >= 7;
+          } else {
+            return false;
+          }
+        } else {
+          return parseInt(msie[1], 10) >= 11;
+        }
+      }
+      // .. but allow all Edge
+      if (uaString.indexOf('Edge/') !== -1) {
+        return true;
+      }
+      // no older Android browser
+      if (uaString.indexOf('Chrome') === -1 && uaString.indexOf('Android') !== -1) {
+        return !/^Google/.test(navigator.vendor);
+      }
+      // no older Chrome (e.g., Samsung browser fork or ancient install)
+      var chromeVersion = /Chrome\/(\d+)/.exec(uaString);
+      if (chromeVersion && chromeVersion[1]) {
+        return parseInt(chromeVersion[1], 10) >= 43;
+      }
+      // no Opera < 15
+      if (uaString.indexOf('Opera') !== -1) {
+        return false;
+      }
+      // everyone else goes through.
+      return true;
+    })();
+
+    if (!supported) {
+      // If unsupported, run pageview before redirecting to update page.
+      ga_.pushCommand(['_trackPageview', '/']);
+      ga_.pushCommand(['_trackEvent', 'Polymer', 'unsupported-browser']);
+      // redirect after analytics has been processed
+      _gaq.push(function() {
+        window.location = 'https://santatracker.google.com' +
+            location.pathname.replace(/[^\/]*$/, '') + 'upgrade.html';
+      });
+    }
+
+    // Track and log any errors to analytics
+    window.onerror = function(message, file, lineNumber) {
+      // We don't want to trigger any errors inside window.onerror otherwise
+      // things will get real bad, real quick.
+      try {
+        window.ga_.pushCommand(['_trackEvent', 'error', file + ':' + lineNumber,
+            '' + message]);
+      } catch (e){}
+    };
+  </script>
+  <script src="./🎄Google Santa Tracker_files/webcomponents-lite.min.js" async=""></script>
+  <link rel="import" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/elements/elements_zh-CN.html">
+  <link rel="import" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/js/ccsender.html" async="">
+<script src="./🎄Google Santa Tracker_files/klang.js"></script><link rel="import" href="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/scenes/dorf/dorf-scene_zh-CN.html"><script src="chrome-extension://pkedcjkdefgpdelpbcmbmeomcjbeemfm/cast_sender.js"></script><script src="chrome-extension://fjhoaacokmgbjemoflkofnenfaiekifl/cast_sender.js"></script><script async="" src="./🎄Google Santa Tracker_files/config.js"></script></head>
+<body data-version="v201512241241" data-gr-c-s-loaded="true">
+
+<santa-app id="santaApp" tabindex="0">
+  
+  <iron-a11y-keys keys="esc" class="style-scope santa-app"></iron-a11y-keys>
+
+  
+  <preload-overlay id="preloader" class="style-scope santa-app x-scope preload-overlay-0" value="100" style="background-color: rgb(62, 196, 240);">
+    
+    <div id="page-progress" class="style-scope preload-overlay">
+      <div class="preload style-scope preload-overlay">
+        <img class="style-scope preload-overlay" src="./🎄Google Santa Tracker_files/village.gif">
+        <div class="preload-bar style-scope preload-overlay">
+          <div class="preload-progress style-scope preload-overlay" style="width:100%"></div>
+        </div>
+      </div>
+    </div>
+  </preload-overlay>
+
+  
+  <santa-tracker-router id="router" auto-hash="" class="style-scope santa-app" hidden=""></santa-tracker-router>
+
+  
+  <santa-chrome id="chrome" class="style-scope santa-app x-scope santa-chrome-0" mode="">
+  
+
+  <iron-media-query query="(max-width: 600px)" class="style-scope santa-chrome"></iron-media-query>
+
+  <paper-drawer-panel id="sidebar" force-narrow="" disable-edge-swipe="true" class="style-scope santa-chrome x-scope paper-drawer-panel-0" style="touch-action: pan-y;" narrow="" selected="main">
+    
+
+    <iron-media-query id="mq" class="style-scope paper-drawer-panel">
+    </iron-media-query>
+
+    <iron-selector attr-for-selected="id" activate-event="" class="narrow-layout left-drawer transition style-scope paper-drawer-panel">
+
+      <div id="main" class="style-scope paper-drawer-panel iron-selected" style="left:0;">
+        <paper-header-panel main="" id="main" mode="seamed" class="  style-scope santa-chrome x-scope paper-header-panel-0">
+    
+
+    <paper-toolbar id="toolbar" class="style-scope santa-chrome x-scope paper-toolbar-0" role="toolbar">
+    
+
+    <div id="topBar" class="toolbar-tools  style-scope paper-toolbar">
+      <paper-icon-button icon="santa:menu" paper-drawer-toggle="" class="toolbar-icon  style-scope santa-chrome x-scope paper-icon-button-0" role="button" tabindex="0" aria-disabled="false"><iron-icon id="icon" class="style-scope paper-icon-button x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope iron-icon"></path></g></svg>
+  </iron-icon></paper-icon-button><div class="flex fixsize leftside  style-scope santa-chrome">
+          <a class="linkwrap style-scope santa-chrome" href="./🎄Google Santa Tracker_files/🎄Google Santa Tracker.htm">
+            <div id="logo" title="Google logo" class="style-scope santa-chrome">
+            </div>
+            <h1 class="title flex style-scope santa-chrome">
+              追踪圣诞老人
+            </h1>
+          </a>
+        </div><div class="shareicons  style-scope santa-chrome">
+          <paper-icon-button class="share box style-scope santa-chrome x-scope paper-icon-button-0" id="gplus" style="padding: 4px" src="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/elements/santa-chrome/img/share-gplus.svg" role="button" tabindex="0" aria-disabled="false"><iron-icon id="icon" class="style-scope paper-icon-button x-scope iron-icon-0">
+  <img draggable="false" src="./🎄Google Santa Tracker_files/share-gplus.svg" class="style-scope iron-icon" style="width: 100%; height: 100%;"></iron-icon></paper-icon-button>
+          <paper-icon-button class="share box style-scope santa-chrome x-scope paper-icon-button-0" id="twitter" style="padding: 9px" src="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/elements/santa-chrome/img/share-twitter.svg" role="button" tabindex="0" aria-disabled="false"><iron-icon id="icon" class="style-scope paper-icon-button x-scope iron-icon-0">
+  <img draggable="false" src="./🎄Google Santa Tracker_files/share-twitter.svg" class="style-scope iron-icon" style="width: 100%; height: 100%;"></iron-icon></paper-icon-button>
+          <paper-icon-button class="share box style-scope santa-chrome x-scope paper-icon-button-0" id="facebook" style="padding: 10px" src="https://maps.gstatic.com/mapfiles/santatracker/v201512241241/elements/santa-chrome/img/share-facebook.svg" role="button" tabindex="0" aria-disabled="false"><iron-icon id="icon" class="style-scope paper-icon-button x-scope iron-icon-0">
+  <img draggable="false" src="./🎄Google Santa Tracker_files/share-facebook.svg" class="style-scope iron-icon" style="width: 100%; height: 100%;"></iron-icon></paper-icon-button>
+        </div>
+    </div>
+
+    <div id="middleBar" class="toolbar-tools  style-scope paper-toolbar">
+      <div class="middle style-scope santa-chrome" style="background-color: "></div>
+    </div>
+
+    <div id="bottomBar" class="toolbar-tools  style-scope paper-toolbar">
+      
+    </div>
+  </paper-toolbar>
+
+    <div id="mainPanel" class="style-scope paper-header-panel">
+      <div id="mainContainer" class="flex style-scope paper-header-panel">
+        <lazy-pages id="lazypages" selectable=":not([disabled])" attr-for-selected="route" selected-attribute="active" class="style-scope santa-app">
+    
+    
+
+      <dorf-scene route="village" freeform="" icon="1f384" id="village" path="scenes/dorf/dorf-scene_zh-CN.html" class="style-scope santa-app iron-selected" mode="" active="" tabindex="0">
+  
+  <div id="module-dorf" class="countdown-finished style-scope dorf-scene">
+    <header class="style-scope dorf-scene">
+      <div id="header-background" class="style-scope dorf-scene">
+        <div id="header-mobilevillage" class="style-scope dorf-scene"></div>
+      </div>
+      <div id="header-skyeffect" class="style-scope dorf-scene">
+        <span class="sun style-scope dorf-scene"></span>
+        <span class="plane style-scope dorf-scene"></span>
+        <span id="village-pegman" class="style-scope dorf-scene active">
+          <a id="village-pegman-image" class="style-scope dorf-scene" href="https://santadive.withgoogle.com/">Santa Dive</a>
+        </span>
+        <div id="effectholder" class="style-scope dorf-scene"><span style="transform: rotate(-19deg); left: 25%;"><span class="shimmy" style="animation-duration: 8.05407s; font-size: 19.1473px;"><span class="fall snow" style="animation-duration: 19.1473s; animation-delay: 5s; width: 15px;"></span></span></span><span style="transform: rotate(-5deg); left: 62%;"><span class="shimmy" style="animation-duration: 12.668s; font-size: 18.3025px;"><span class="fall snow" style="animation-duration: 18.3025s; animation-delay: 6s; width: 13px;"></span></span></span><span style="transform: rotate(29deg); left: 5%;"><span class="shimmy" style="animation-duration: 11.0995s; font-size: 11.1899px;"><span class="fall snow" style="animation-duration: 11.1899s; animation-delay: 7s; width: 12px;"></span></span></span><span style="transform: rotate(26deg); left: 59%;"><span class="shimmy" style="animation-duration: 13.0882s; font-size: 11.581px;"><span class="fall snow" style="animation-duration: 11.581s; animation-delay: 8s; width: 12px;"></span></span></span><span style="transform: rotate(18deg); left: 12%;"><span class="shimmy" style="animation-duration: 11.0172s; font-size: 14.8734px;"><span class="fall snow" style="animation-duration: 14.8734s; animation-delay: 9s; width: 15px;"></span></span></span><span style="transform: rotate(14deg); left: 19%;"><span class="shimmy" style="animation-duration: 14.9327s; font-size: 13.7304px;"><span class="fall snow" style="animation-duration: 13.7304s; animation-delay: 10s; width: 12px;"></span></span></span><span style="transform: rotate(9deg); left: 76%;"><span class="shimmy" style="animation-duration: 12.4622s; font-size: 8.45221px;"><span class="fall snow" style="animation-duration: 8.45221s; animation-delay: 11s; width: 13px;"></span></span></span><span style="transform: rotate(-21deg); left: 46%;"><span class="shimmy" style="animation-duration: 12.383s; font-size: 14.9956px;"><span class="fall snow" style="animation-duration: 14.9956s; animation-delay: 12s; width: 10px;"></span></span></span><span style="transform: rotate(-4deg); left: 77%;"><span class="shimmy" style="animation-duration: 12.4071s; font-size: 7.91905px;"><span class="fall snow" style="animation-duration: 7.91905s; animation-delay: 13s; width: 12px;"></span></span></span><span style="transform: rotate(28deg); left: 16%;"><span class="shimmy" style="animation-duration: 10.5829s; font-size: 13.2684px;"><span class="fall snow" style="animation-duration: 13.2684s; animation-delay: 14s; width: 8px;"></span></span></span><span style="transform: rotate(5deg); left: 42%;"><span class="shimmy" style="animation-duration: 15.5368s; font-size: 16.6798px;"><span class="fall snow" style="animation-duration: 16.6798s; animation-delay: 15s; width: 9px;"></span></span></span><span style="transform: rotate(-16deg); left: 15%;"><span class="shimmy" style="animation-duration: 15.1991s; font-size: 12.9894px;"><span class="fall snow" style="animation-duration: 12.9894s; animation-delay: 16s; width: 9px;"></span></span></span><span style="transform: translate(0px, 254.545px);"><span class="cloud cloud0" style="animation-duration: 119.959s; animation-delay: 1s;"></span></span><span style="transform: translate(0px, 196.326px);"><span class="cloud cloud1" style="animation-duration: 53.3734s; animation-direction: reverse; animation-delay: 2s;"></span></span><span style="transform: translate(0px, 254.188px);"><span class="cloud cloud1" style="animation-duration: 180.779s; animation-delay: 3s;"></span></span><span style="transform: translate(0px, 246.079px);"><span class="cloud cloud0" style="animation-duration: 136.715s; animation-direction: reverse; animation-delay: 4s;"></span></span></div>
+        <div id="header-mobileelves" class="style-scope dorf-scene"></div>
+      </div>
+      <div id="header-content" class="style-scope dorf-scene">
+        <div id="ornament" class="style-scope dorf-scene"></div>
+        <div id="count-down" class="mode- style-scope dorf-scene">
+          <h2 class="style-scope dorf-scene">圣诞老人出发倒计时</h2>
+          <countdown-timer id="count" class="style-scope dorf-scene x-scope countdown-timer-0" finished="">
+    
+
+    <div hidden="" class="style-scope countdown-timer">
+      <h3 class="style-scope dorf-scene">天</h3><h3 class="style-scope dorf-scene">小时</h3><h3 class="style-scope dorf-scene">分钟</h3><h3 class="style-scope dorf-scene">秒</h3>
+    </div>
+
+    <div id="counter" class="style-scope countdown-timer">
+      
+        <div class="counter-box style-scope countdown-timer" hidden="">
+          <div class="holder active style-scope countdown-timer">00</div>
+          <div class="holder prev style-scope countdown-timer"></div>
+          <h2 class="style-scope countdown-timer">天</h2>
+        </div>
+      
+        <div class="counter-box style-scope countdown-timer">
+          <div class="holder active style-scope countdown-timer">00</div>
+          <div class="holder prev style-scope countdown-timer"></div>
+          <h2 class="style-scope countdown-timer">小时</h2>
+        </div>
+      
+        <div class="counter-box style-scope countdown-timer">
+          <div class="holder active style-scope countdown-timer">00</div>
+          <div class="holder prev style-scope countdown-timer"></div>
+          <h2 class="style-scope countdown-timer">分钟</h2>
+        </div>
+      
+        <div class="counter-box style-scope countdown-timer">
+          <div class="holder active style-scope countdown-timer">00</div>
+          <div class="holder prev style-scope countdown-timer"></div>
+          <h2 class="style-scope countdown-timer">秒</h2>
+        </div>
+      <template is="dom-repeat" class="style-scope countdown-timer"></template>
+    </div>
+
+  </countdown-timer>
+        </div>
+        <div class="castlogo style-scope dorf-scene" hidden=""></div>
+        <h1 class="style-scope dorf-scene">追踪圣诞老人</h1>
+        <a class="village-tracker-link style-scope dorf-scene" href="https://santatracker.google.com/#tracker" hidden="">
+          追踪圣诞老人
+        </a>
+        <p class="style-scope dorf-scene">在弥漫着节日气氛的 12 月，与圣诞老人的小精灵们一起探索、玩耍、学习</p>
+      </div>
+    </header>
+    <div id="village-all" class="style-scope dorf-scene">
+      <div id="mobiletext" class="style-scope dorf-scene">
+        <p class="style-scope dorf-scene">在弥漫着节日气氛的 12 月，与圣诞老人的小精灵们一起探索、玩耍、学习</p>
+      </div>
+      <div id="ground" class="style-scope dorf-scene"></div>
+      <div id="road" class="style-scope dorf-scene"></div>
+      <div id="houses" class="style-scope dorf-scene">
+        <div class="house house-new-today new-today- style-scope dorf-scene">
+          <template is="dom-if" class="style-scope dorf-scene"></template>
+        </div>
+        
+          <div class="house house-airport  iced style-scope dorf-scene" id="house-airport">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-airport style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #fdbe27"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene" hidden="">1</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">北极机场</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-traditions  iced style-scope dorf-scene" id="house-traditions">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-traditions style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #fdbe27"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene" hidden="">1</div>
+                      <h4 class="style-scope dorf-scene">学知识</h4>
+                      <h3 class="style-scope dorf-scene">节日传统</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">学知识</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-codelab  iced style-scope dorf-scene" id="house-codelab">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-codelab style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #9a519f"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene" hidden="">1</div>
+                      <h4 class="style-scope dorf-scene">学知识</h4>
+                      <h3 class="style-scope dorf-scene">代码实验室</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">学知识</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-app  iced style-scope dorf-scene" id="house-app">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-app style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene" hidden="">1</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">Android 应用</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-seasonofgiving  iced style-scope dorf-scene" id="house-seasonofgiving">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">1</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-seasonofgiving style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #9dca3b"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">1</div>
+                      <h4 class="style-scope dorf-scene">学知识</h4>
+                      <h3 class="style-scope dorf-scene">礼物漫天飞</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">学知识</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-santasback  iced style-scope dorf-scene" id="house-santasback">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">2</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-santasback style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">2</div>
+                      <h4 class="style-scope dorf-scene">看视频</h4>
+                      <h3 class="style-scope dorf-scene">圣诞老人回归</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">看视频</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-santaselfie  iced style-scope dorf-scene" id="house-santaselfie">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">3</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-santaselfie style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #4172e8"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">3</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">圣诞老人自拍</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-translations  iced style-scope dorf-scene" id="house-translations">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">4</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-translations style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #558b2f"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">4</div>
+                      <h4 class="style-scope dorf-scene">学知识</h4>
+                      <h3 class="style-scope dorf-scene">翻译</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">学知识</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-carpool  iced style-scope dorf-scene" id="house-carpool">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">5</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-carpool style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">5</div>
+                      <h4 class="style-scope dorf-scene">看视频</h4>
+                      <h3 class="style-scope dorf-scene">精灵车</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">看视频</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-presentdrop  iced style-scope dorf-scene" id="house-presentdrop">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">6</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-presentdrop style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">6</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">礼从天降</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-santasearch  iced style-scope dorf-scene" id="house-santasearch">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">7</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-santasearch style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #00904a"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">7</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">圣诞老人搜索</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-windtunnel  iced style-scope dorf-scene" id="house-windtunnel">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">8</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-windtunnel style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">8</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">风洞</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-racer  iced style-scope dorf-scene" id="house-racer">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">9</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-racer style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">9</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">驯鹿狂飙</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-jamband  iced style-scope dorf-scene" id="house-jamband">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">10</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-jamband style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #fdbe27"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">10</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">摇滚精灵乐</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-gumball  iced style-scope dorf-scene" id="house-gumball">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">11</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-gumball style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #fdbe27"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">11</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">彩球滑落</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-postcard  iced style-scope dorf-scene" id="house-postcard">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">12</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-postcard style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">12</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">圣诞老人贺卡</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-jetpack  iced style-scope dorf-scene" id="house-jetpack">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">13</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-jetpack style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #9a519f"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">13</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">精灵飞侠</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-boatload  iced style-scope dorf-scene" id="house-boatload">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">14</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-boatload style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">14</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">礼物弹珠</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-codeboogie  iced style-scope dorf-scene" id="house-codeboogie">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">15</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-codeboogie style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #9a519f"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">15</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">代码之舞</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-presentbounce  iced style-scope dorf-scene" id="house-presentbounce">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">16</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-presentbounce style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">16</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">礼物弹球</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-mercator  iced style-scope dorf-scene" id="house-mercator">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">17</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-mercator style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">17</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">地图测验</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-briefing  iced style-scope dorf-scene" id="house-briefing">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">18</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-briefing style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">18</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">克劳斯太太的致辞</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-citylights  iced style-scope dorf-scene" id="house-citylights">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">19</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-citylights style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: #182a4a"></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">19</div>
+                      <h4 class="style-scope dorf-scene">学知识</h4>
+                      <h3 class="style-scope dorf-scene">城市之光</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">学知识</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-commandcentre  iced style-scope dorf-scene" id="house-commandcentre">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">20</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-commandcentre style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">20</div>
+                      <h4 class="style-scope dorf-scene">看视频</h4>
+                      <h3 class="style-scope dorf-scene">任务控制中心</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">看视频</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-factory  iced style-scope dorf-scene" id="house-factory">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">21</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-factory style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">21</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene"></h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-matching  iced style-scope dorf-scene" id="house-matching">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">22</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-matching style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">22</div>
+                      <h4 class="style-scope dorf-scene">玩游戏</h4>
+                      <h3 class="style-scope dorf-scene">翻牌配对</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">玩游戏</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        
+          <div class="house house-liftoff  iced style-scope dorf-scene" id="house-liftoff">
+            <div class="assets housez style-scope dorf-scene">
+              <div class="building style-scope dorf-scene"></div>
+              
+                
+                  <div class="launchdate style-scope dorf-scene">23</div>
+                <template is="dom-if" class="style-scope dorf-scene"></template>
+                <div class="ice style-scope dorf-scene"></div>
+              <template is="dom-if" class="style-scope dorf-scene"></template>
+            </div>
+            
+              <div class="action style-scope dorf-scene">
+                <a class="link style-scope dorf-scene">
+                  <div class="card card-liftoff style-scope dorf-scene">
+                    <div class="image style-scope dorf-scene"></div>
+                    <div class="color style-scope dorf-scene" style="background-color: "></div>
+                    <div class="text style-scope dorf-scene">
+                      <div class="launchdate style-scope dorf-scene">23</div>
+                      <h4 class="style-scope dorf-scene">看视频</h4>
+                      <h3 class="style-scope dorf-scene">圣诞老人出发</h3>
+                      <div class="img-lock style-scope dorf-scene"></div>
+                    </div>
+                    <template is="dom-if" class="style-scope dorf-scene"></template>
+                  </div>
+                </a>
+                <h5 class="housez style-scope dorf-scene">看视频</h5>
+              </div>
+            <template is="dom-if" class="style-scope dorf-scene"></template>
+          </div>
+        <template id="housesloop" is="dom-repeat" observe="iced disabled" class="style-scope dorf-scene"></template>
+
+        
+        <div id="eastereggs" class="mode- style-scope dorf-scene">
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-tree"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-blocks"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-statue"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-penguin-revolt"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-snowman-reading"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-rosetta-stone"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-white-board"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-book-club"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-unicycle"></div>
+          
+            <div class="easter-egg style-scope dorf-scene" id="easteregg-walrus"></div>
+          <template is="dom-repeat" class="style-scope dorf-scene"></template>
+
+          <div id="easteregg-schoolyard" class="easter-egg style-scope dorf-scene">
+            <div class="slide style-scope dorf-scene"></div>
+            <div class="seesaw style-scope dorf-scene"></div>
+            <div class="swing style-scope dorf-scene"></div>
+          </div>
+
+          <div id="easteregg-balloon" class="easter-egg style-scope dorf-scene flying"></div>
+          <div id="easteregg-balloon-ropes" class="easter-egg style-scope dorf-scene flying"></div>
+          <div id="easteregg-balloon-flight" class="easter-egg style-scope dorf-scene flying"></div>
+
+          <div id="easteregg-snowmobile1" class="easter-egg style-scope dorf-scene"></div>
+          <div id="easteregg-snowmobile2" class="easter-egg style-scope dorf-scene"></div>
+          <div id="easteregg-snowmobile3" class="easter-egg style-scope dorf-scene"></div>
+          <div id="easteregg-snowmobile4" class="easter-egg style-scope dorf-scene"></div>
+
+          <div id="easteregg-busstop1" class="easter-egg style-scope dorf-scene">
+            <div class="elf-stop elf-green style-scope dorf-scene"></div>
+            <div class="elf-stop elf-orange style-scope dorf-scene"></div>
+            <div class="elf-stop elf-orange style-scope dorf-scene"></div>
+            <div class="elf-stop elf-blue style-scope dorf-scene"></div>
+            <div class="elf-stop biz-snowman style-scope dorf-scene"></div>
+            <div class="bus style-scope dorf-scene">
+              <div class="snowman-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+            </div>
+          </div>
+
+          <div id="easteregg-busstop2" class="easter-egg style-scope dorf-scene bus-load">
+            <div class="elf-stop elf-blue style-scope dorf-scene"></div>
+            <div class="elf-stop elf-green style-scope dorf-scene"></div>
+            <div class="bus style-scope dorf-scene">
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+            </div>
+          </div>
+
+          <div id="easteregg-busstop3" class="easter-egg style-scope dorf-scene">
+            <div class="elf-stop elf-sit-red style-scope dorf-scene"></div>
+            <div class="elf-stop elf-blue style-scope dorf-scene"></div>
+            <div class="elf-stop elf-green style-scope dorf-scene"></div>
+            <div class="bus style-scope dorf-scene">
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+              <div class="elf-bus style-scope dorf-scene"></div>
+            </div>
+          </div>
+
+          <div id="easteregg-tic-tac-toe" class="easter-egg style-scope dorf-scene">
+            <div class="tic-tac style-scope dorf-scene cross red"></div>
+            <div class="tic-tac style-scope dorf-scene cross red"></div>
+            <div class="tic-tac style-scope dorf-scene cross red"></div>
+            <div class="tic-tac style-scope dorf-scene cross red"></div>
+            <div class="tic-tac style-scope dorf-scene naught blue"></div>
+            <div class="tic-tac style-scope dorf-scene naught blue"></div>
+            <div class="tic-tac style-scope dorf-scene naught blue"></div>
+            <div class="tic-tac empty style-scope dorf-scene"></div>
+            <div class="tic-tac empty style-scope dorf-scene"></div>
+            <div id="easteregg-tic-tac-toe-elves-red" class="elves style-scope dorf-scene move"></div>
+            <div id="easteregg-tic-tac-toe-elves-blue" class="elves style-scope dorf-scene move"></div>
+            <div id="easteregg-tic-tac-toe-win" class="style-scope dorf-scene red pos-0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+      <div id="village-footer" class="style-scope dorf-scene">
+        <p class="style-scope dorf-scene" hidden="">24 日平安夜，来跟我们一起追踪圣诞老人的行踪！</p>
+        <img class="style-scope dorf-scene" src="./🎄Google Santa Tracker_files/day-of-assets-footer.svg">
+      </div>
+      <div id="village-donate" class="no-en style-scope dorf-scene">
+        <div id="wrapper" class="style-scope dorf-scene">
+          <h3 class="style-scope dorf-scene">#ForEveryKid</h3>
+          <p class="style-scope dorf-scene">
+            Help fund a special needs project on DonorsChoose.org.
+            This December, we're helping to double the impact by matching donations by 50%, until we reach our goal of donating US$1,000,000.
+            Together, we can make classrooms more inclusive #ForEveryKid
+          </p>
+          <div class="button donate-button style-scope dorf-scene">
+            <a target="_blank" href="https://google.org/impactchallenge/disabilities/donors-choose.html" class="style-scope dorf-scene">Donate</a>
+          </div>
+        </div>
+      </div>
+    <template is="dom-if" class="style-scope dorf-scene"></template>
+  </div>
+</dorf-scene>
+
+      
+
+      <about-scene route="about" freeform="" icon="2753" header-color="rgb(39, 186, 131)" path="scenes/about/about-scene_zh-CN.html" class="style-scope santa-app"></about-scene>
+
+      <airport-scene route="airport" icon="1f6c4" header-color="#fdbe27" path="scenes/airport/airport-scene_zh-CN.html" class="style-scope santa-app"></airport-scene>
+
+      <blimp-scene route="blimp" icon="1f6a1" path="scenes/blimp/blimp-scene_zh-CN.html" class="style-scope santa-app"></blimp-scene>
+
+      <boatload-scene route="boatload" icon="26f5" loading-bg-color="#8fd7f7" loading-src="scenes/boatload/img/loading.svg" path="scenes/boatload/boatload-scene_zh-CN.html" class="style-scope santa-app" mode=""></boatload-scene>
+
+      <briefing-scene route="briefing" icon="1f3eb" path="scenes/briefing/briefing-scene_zh-CN.html" class="style-scope santa-app"></briefing-scene>
+
+      <callfromsanta-scene route="callfromsanta" icon="1f4de" path$="scenes/callfromsanta/callfromsanta-scene.html" loading-bg-color="rgb(129,208,0)" class="style-scope santa-app"></callfromsanta-scene>
+
+      <citylights-scene route="citylights" icon="1f306" header-color="#182a4a" loading-bg-color="#8fd7f7" loading-src="scenes/citylights/img/loading.svg" path="scenes/citylights/citylights-scene_zh-CN.html" class="style-scope santa-app" mode=""></citylights-scene>
+
+      <codeboogie-scene route="codeboogie" icon="1f4dd" header-color="#9a519f" loading-bg-color="#3f4ea1" loading-src="scenes/codeboogie/img/loading.svg" path="scenes/codeboogie/codeboogie-scene_zh-CN.html" class="style-scope santa-app" mode=""></codeboogie-scene>
+
+      <codelab-scene route="codelab" icon="1f4dd" header-color="#9a519f" loading-bg-color="#3f4ea1" loading-src="scenes/codelab/img/loading.svg" path="scenes/codelab/codelab-scene_zh-CN.html" class="style-scope santa-app" mode=""></codelab-scene>
+
+      <commandcentre-scene route="commandcentre" icon="1f5fc" loading-bg-color="rgb(129,208,0)" path="scenes/commandcentre/commandcentre-scene_zh-CN.html" class="style-scope santa-app" mode=""></commandcentre-scene>
+
+      <factory-scene route="factory" icon="1f3ed" loading-bg-color="rgb(129,208,0)" path="scenes/factory/factory-scene_zh-CN.html" class="style-scope santa-app"></factory-scene>
+
+      <glider-scene route="glider" icon="1f343" loading-bg-color="#8d23a9" loading-src="scenes/glider/img/loading.svg" path="scenes/glider/glider-scene_zh-CN.html" class="style-scope santa-app" mode=""></glider-scene>
+
+      <gumball-scene route="gumball" icon="1f36d" header-color="#fdbe27" loading-bg-color="#8d23a9" loading-src="scenes/gumball/img/loading.svg" path="scenes/gumball/gumball-scene_zh-CN.html" class="style-scope santa-app" mode=""></gumball-scene>
+
+      <icecave-scene route="icecave" icon="2744" path="scenes/icecave/icecave-scene_zh-CN.html" class="style-scope santa-app"></icecave-scene>
+
+      <island-scene route="island" icon="1f334" path="scenes/island/island-scene_zh-CN.html" class="style-scope santa-app"></island-scene>
+
+      <jamband-scene route="jamband" icon="1f3b6" header-color="#fdbe27" loading-bg-color="#fdbe27" loading-src="scenes/jamband/img/loading.svg" path="scenes/jamband/jamband-scene_zh-CN.html" class="style-scope santa-app" mode=""></jamband-scene>
+
+      <jetpack-scene route="jetpack" icon="1f680" header-color="#9a519f" loading-bg-color="#8fd7f7" loading-src="scenes/jetpack/img/loading.svg" path="scenes/jetpack/jetpack-scene_zh-CN.html" class="style-scope santa-app" mode=""></jetpack-scene>
+
+      <latlong-scene route="latlong" icon="1f3af" loading-bg-color="#ffcc00" loading-src="scenes/latlong/img/loading.svg" path="scenes/latlong/latlong-scene_zh-CN.html" class="style-scope santa-app" mode=""></latlong-scene>
+
+      <matching-scene route="matching" icon="1f6aa" loading-bg-color="#b27644" loading-src="scenes/matching/img/loading.svg" path="scenes/matching/matching-scene_zh-CN.html" class="style-scope santa-app" mode=""></matching-scene>
+
+      <mercator-scene route="mercator" icon="1f30e" loading-bg-color="#fbbf2c" loading-src="scenes/mercator/img/loading.svg" path="scenes/mercator/mercator-scene_zh-CN.html" class="style-scope santa-app" mode=""></mercator-scene>
+
+      
+
+      <playground-scene route="playground" icon="1f3aa" loading-bg-color="rgb(251, 191, 44)" path="scenes/playground/playground-scene_zh-CN.html" class="style-scope santa-app"></playground-scene>
+
+      <postcard-scene route="postcard" icon="1f4ec" loading-bg-color="rgb(244, 123, 32)" loading-src="scenes/postcard/img/loading.gif" path="scenes/postcard/postcard-scene_zh-CN.html" class="style-scope santa-app" mode=""></postcard-scene>
+
+      <presentdrop-scene route="presentdrop" icon="1f381" loading-bg-color="#8fd7f7" loading-src="scenes/presentdrop/img/loading.svg" path="scenes/presentdrop/presentdrop-scene_zh-CN.html" class="style-scope santa-app" mode=""></presentdrop-scene>
+
+      <presentbounce-scene route="presentbounce" icon="1f381" loading-bg-color="#8fd7f7" loading-src="scenes/presentbounce/img/loading.svg" path="scenes/presentbounce/presentbounce-scene_zh-CN.html" class="style-scope santa-app" mode=""></presentbounce-scene>
+
+      <racer-scene route="racer" icon="1f3c1" loading-bg-color="#8fd7f7" loading-src="scenes/racer/img/loading.svg" path="scenes/racer/racer-scene_zh-CN.html" class="style-scope santa-app" mode=""></racer-scene>
+
+      <runner-scene route="runner" icon="1f3c7" path="scenes/runner/runner-scene_zh-CN.html" class="style-scope santa-app" mode=""></runner-scene>
+
+      <rollercoaster-scene route="rollercoaster" icon="1f3a2" path$="scenes/rollercoaster/rollercoaster-scene.html" class="style-scope santa-app"></rollercoaster-scene>
+
+      <santasearch-scene route="santasearch" icon="" header-color="#00904a" loading-bg-color="#29B6F6" loading-src="scenes/santasearch/img/loading.svg" path="scenes/santasearch/santasearch-scene_zh-CN.html" class="style-scope santa-app" mode=""></santasearch-scene>
+
+      <santaselfie-scene route="santaselfie" icon="1f488" header-color="#4172e8" loading-bg-color="#83D7F5" loading-src="scenes/santaselfie/img/loading.svg" path="scenes/santaselfie/santaselfie-scene_zh-CN.html" class="style-scope santa-app" mode=""></santaselfie-scene>
+
+      <seasonofcaring-scene route="seasonofcaring" icon="1f3ee" loading-src="scenes/seasonofcaring/img/loading.svg" path="scenes/seasonofcaring/seasonofcaring-scene_zh-CN.html" class="style-scope santa-app" mode=""></seasonofcaring-scene>
+
+      <seasonofgiving-scene route="seasonofgiving" icon="1f3ee" header-color="#9dca3b" loading-src="scenes/seasonofgiving/img/loading.svg" path="scenes/seasonofgiving/seasonofgiving-scene_zh-CN.html" class="style-scope santa-app" mode=""></seasonofgiving-scene>
+
+      <streetview-scene route="streetview" icon="1f3a5" loading-bg-color="rgb(129,208,0)" path="scenes/streetview/streetview-scene_zh-CN.html" class="style-scope santa-app"></streetview-scene>
+
+      <tracker-scene id="tracker" route="tracker" freeform="" icon="1f30d" path="scenes/tracker/tracker-scene_zh-CN.html" class="style-scope santa-app"></tracker-scene>
+
+      <traditions-scene route="traditions" icon="1f4cc" header-color="#fdbe27" loading-bg-color="rgb(255,224,0)" loading-src="scenes/traditions/img/loading.gif" path="scenes/traditions/traditions-scene_zh-CN.html" class="style-scope santa-app" mode=""></traditions-scene>
+
+      <translations-scene route="translations" icon="1f4e2" header-color="#558b2f" loading-bg-color="#8fd7f7" loading-src="scenes/translations/img/loading.png" path="scenes/translations/translations-scene_zh-CN.html" class="style-scope santa-app"></translations-scene>
+
+      <trivia-scene route="trivia" path="scenes/trivia/trivia-scene_zh-CN.html" class="style-scope santa-app"></trivia-scene>
+
+      <undersea-scene route="undersea" icon="1f30a" path="scenes/undersea/undersea-scene_zh-CN.html" class="style-scope santa-app"></undersea-scene>
+
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="wheressanta" mode="" youtube-id="0qrFL0mn3Uk"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="santasback" mode="" youtube-id="nXLNcfNsWAY"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="trailer" mode="" youtube-id="IdpQSy4IB_I"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="carpool" mode="" youtube-id="h83b1lWPuvQ"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="liftoff" mode="" youtube-id="YNpwm08ZRD0"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="jingle" mode="" youtube-id="sQnKCU_A0Yc"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="satellite" mode="" youtube-id="ZJPL56IPTjw"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="temptation" mode="" youtube-id="2FtcJJ9vzVQ"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="office" mode="" youtube-id="IXmDOu-eSx4"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="tired" mode="" youtube-id="2UGX3bT9u20"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="com-room" mode="" youtube-id="_WdYujHlmHA"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="reload" mode="" youtube-id="vHMeXs36NTE"></video-scene>
+      
+        <video-scene path="scenes/videoscene/video-scene_zh-CN.html" class="style-scope santa-app" route="slacking-off" mode="" youtube-id="uEl2WIZOVdQ"></video-scene>
+      <template is="dom-repeat" class="style-scope santa-app"></template>
+
+      <windtunnel-scene route="windtunnel" icon="1f38f" loading-bg-color="rgb(129,208,0)" path="scenes/windtunnel/windtunnel-scene_zh-CN.html" class="style-scope santa-app"></windtunnel-scene>
+
+      <press-scene route="press" freeform="" icon="1f4f0" path$="scenes/press/press-scene.html" class="style-scope santa-app"></press-scene>
+
+    
+  </lazy-pages>
+      </div>
+      <div id="dropShadow" class="style-scope paper-header-panel"></div>
+    </div>
+  </paper-header-panel>
+        <div id="scrim" class="style-scope paper-drawer-panel"></div>
+      </div>
+
+      <div id="drawer" class="style-scope paper-drawer-panel" style="width:400px;">
+        <div id="drawer" drawer="" class="scroll style-scope santa-chrome">
+      <div class="style-scope santa-chrome">
+        <paper-toolbar class="close-sidebar style-scope santa-chrome x-scope paper-toolbar-0" tabindex="0" role="toolbar">
+    
+
+    <div id="topBar" class="toolbar-tools  style-scope paper-toolbar">
+      <iron-icon icon="santa:close" class="style-scope santa-chrome x-scope iron-icon-1"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="style-scope iron-icon"></path></g></svg>
+  </iron-icon><span class="style-scope santa-chrome">关闭</span>
+    </div>
+
+    <div id="middleBar" class="toolbar-tools  style-scope paper-toolbar">
+      
+    </div>
+
+    <div id="bottomBar" class="toolbar-tools  style-scope paper-toolbar">
+      
+    </div>
+  </paper-toolbar>
+        <div class="cards style-scope santa-chrome">
+          <a href="./🎄Google Santa Tracker_files/🎄Google Santa Tracker.htm" class="style-scope santa-chrome">
+            <div class="menucard menucard-village style-scope santa-chrome">
+              <h2 class="style-scope santa-chrome">日历</h2>
+              <h3 class="style-scope santa-chrome">圣诞老人小镇</h3>
+            </div>
+          </a>
+          <template is="dom-if" class="style-scope santa-chrome"></template>
+          <a class="style-scope santa-chrome">
+            <div class="menucard menucard-tracker style-scope santa-chrome">
+              
+                <div class="lock style-scope santa-chrome"></div>
+              <template is="dom-if" class="style-scope santa-chrome"></template>
+              <h2 class="style-scope santa-chrome">12月24日</h2>
+              <h3 class="style-scope santa-chrome">追踪圣诞老人</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="links style-scope santa-chrome">
+          <h2 class="style-scope santa-chrome">
+            更多探索方式
+          </h2>
+          <ul class="style-scope santa-chrome">
+            <li class="style-scope santa-chrome"><a target="_blank" class="style-scope santa-chrome" href="https://play.google.com/store/apps/details?id=com.google.android.apps.santatracker&amp;hl=zh-cn">
+              下载 Android 版“追踪圣诞老人”应用
+            </a></li>
+            <li class="style-scope santa-chrome"><a class="style-scope santa-chrome" href="https://santatracker.google.com/#press">
+              新闻
+            </a></li>
+            <li class="style-scope santa-chrome"><a class="style-scope santa-chrome" href="https://santatracker.google.com/#about">
+              简介
+            </a></li>
+            <li class="style-scope santa-chrome"><a target="_blank" class="style-scope santa-chrome" href="https://chrome.google.com/webstore/detail/santa-tracker/iodomglenhcehfbhbakhedmbobhbgjcb?hl=zh-cn">
+              添加圣诞老人 Chrome 扩展程序
+            </a></li>
+            <li class="style-scope santa-chrome"><a target="_blank" class="style-scope santa-chrome" href="https://www.google.com/policies/?hl=zh-cn">
+              条款和隐私权信息
+            </a></li>
+            <li class="style-scope santa-chrome"><a target="_blank" class="style-scope santa-chrome" href="https://maps.google.com/maps/about/?hl=zh-cn">
+              下载 Google 地图
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="lang style-scope santa-chrome">
+          <iron-icon icon="santa:language" class="style-scope santa-chrome x-scope iron-icon-1"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" class="style-scope iron-icon"></path></g></svg>
+  </iron-icon>
+          <select id="language" class="style-scope santa-chrome">
+            <option value="af" class="style-scope santa-chrome">Afrikaans</option>
+            <option value="ca" class="style-scope santa-chrome">Català</option>
+            <option value="zh-CN" class="style-scope santa-chrome">中文（香港）</option>
+            <option value="zh-TW" class="style-scope santa-chrome">中文</option>
+            <option value="da" class="style-scope santa-chrome">Dansk</option>
+            <option value="de" class="style-scope santa-chrome">Deutsch</option>
+            <option value="et" class="style-scope santa-chrome">Eesti</option>
+            <option value="en" class="style-scope santa-chrome">English</option>
+            <option value="en-GB" class="style-scope santa-chrome">English (United Kingdom)</option>
+            <option value="es" class="style-scope santa-chrome">Español</option>
+            <option value="es-419" class="style-scope santa-chrome">Español (América Latina)</option>
+            <option value="fr" class="style-scope santa-chrome">Français</option>
+            <option value="fr-CA" class="style-scope santa-chrome">Français (Canada)</option>
+            <option value="hr" class="style-scope santa-chrome">Hrvatski</option>
+            <option value="id" class="style-scope santa-chrome">Indonesia</option>
+            <option value="it" class="style-scope santa-chrome">Italiano</option>
+            <option value="ko" class="style-scope santa-chrome">한국어</option>
+            <option value="ja" class="style-scope santa-chrome">日本語</option>
+            <option value="lv" class="style-scope santa-chrome">Latvijas</option>
+            <option value="lt" class="style-scope santa-chrome">Lietuvos</option>
+            <option value="no" class="style-scope santa-chrome">Norsk</option>
+            <option value="pl" class="style-scope santa-chrome">Polski</option>
+            <option value="pt-BR" class="style-scope santa-chrome">Português (Brasil)</option>
+            <option value="pt-PT" class="style-scope santa-chrome">Português (Portugal)</option>
+            <option value="ru" class="style-scope santa-chrome">Русский
+            </option><option value="ro" class="style-scope santa-chrome">Română</option>
+            <option value="sl" class="style-scope santa-chrome">Slovenija</option>
+            <option value="sv" class="style-scope santa-chrome">Svenska</option>
+            <option value="tl" class="style-scope santa-chrome">Tagalog</option>
+            <option value="vi" class="style-scope santa-chrome">Tiếng Việt</option>
+            <option value="fi" class="style-scope santa-chrome">Viimeistely</option>
+            <option value="bg" class="style-scope santa-chrome">Български</option>
+            <option value="uk" class="style-scope santa-chrome">Український</option>
+            <option value="ta" class="style-scope santa-chrome">தமிழ்</option>
+            <option value="ml" class="style-scope santa-chrome">മലയാളം </option>
+            <option value="th" class="style-scope santa-chrome">ภาษาไทย</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+      </div>
+
+    </iron-selector>
+  </paper-drawer-panel>
+  <div id="sound" style="background-color: " class="on style-scope santa-chrome">
+    <button class="style-scope santa-chrome"><i class="style-scope santa-chrome"></i></button>
+  </div>
+</santa-chrome>
+
+  
+  <div id="msg" hidden="" class="style-scope santa-app">
+    <div msgid="category-learn" class="style-scope santa-app">学知识</div>
+    <div msgid="category-play" class="style-scope santa-app">玩游戏</div>
+    <div msgid="category-watch" class="style-scope santa-app">看视频</div>
+    <div msgid="scene-airport" class="style-scope santa-app">北极机场</div>
+    <div msgid="scene-app" class="style-scope santa-app">Android 应用</div>
+    <div msgid="scene-boatload" class="style-scope santa-app">礼物弹珠</div>
+    <div msgid="scene-briefing" class="style-scope santa-app">克劳斯太太的致辞</div>
+    <div msgid="scene-callfromsanta" class="style-scope santa-app">圣诞老人来电</div>
+    <div msgid="scene-carpool" class="style-scope santa-app">精灵车</div>
+    <div msgid="scene-citylights" class="style-scope santa-app">城市之光</div>
+    <div msgid="scene-codeboogie" class="style-scope santa-app">代码之舞</div>
+    <div msgid="scene-codelab" class="style-scope santa-app">代码实验室</div>
+    <div msgid="scene-commandcentre" class="style-scope santa-app">任务控制中心</div>
+    <div msgid="scene-factory" class="style-scope santa-app"></div>
+    <div msgid="scene-gumball" class="style-scope santa-app">彩球滑落</div>
+    <div msgid="scene-jamband" class="style-scope santa-app">摇滚精灵乐</div>
+    <div msgid="scene-jetpack" class="style-scope santa-app">精灵飞侠</div>
+    <div msgid="scene-liftoff" class="style-scope santa-app">圣诞老人出发</div>
+    <div msgid="scene-matching" class="style-scope santa-app">翻牌配对</div>
+    <div msgid="scene-mercator" class="style-scope santa-app">地图测验</div>
+    <div msgid="scene-postcard" class="style-scope santa-app">圣诞老人贺卡</div>
+    <div msgid="scene-presentbounce" class="style-scope santa-app">礼物弹球</div>
+    <div msgid="scene-presentdrop" class="style-scope santa-app">礼从天降</div>
+    <div msgid="scene-racer" class="style-scope santa-app">驯鹿狂飙</div>
+    <div msgid="scene-santasback" class="style-scope santa-app">圣诞老人回归</div>
+    <div msgid="scene-santasearch" class="style-scope santa-app">圣诞老人搜索</div>
+    <div msgid="scene-santaselfie" class="style-scope santa-app">圣诞老人自拍</div>
+    <div msgid="scene-seasonofcaring" class="style-scope santa-app">送温暖的季节</div>
+    <div msgid="scene-seasonofgiving" class="style-scope santa-app">礼物漫天飞</div>
+    <div msgid="scene-traditions" class="style-scope santa-app">节日传统</div>
+    <div msgid="scene-translations" class="style-scope santa-app">翻译</div>
+    <div msgid="scene-windtunnel" class="style-scope santa-app">风洞</div>
+  </div>
+
+</santa-app>
+
+<div id="timer" role="timer" aria-live="assertive" aria-atomic="false" aria-relevant="additions" hidden="">0</div>
+
+<div id="preload_placeholder"></div>
+
+<script>
+(function() {
+
+var inEmbed = self != top;
+if (inEmbed) {
+  if (getUrlParameter('site')) {
+    ga_.pushCommand(['_setReferrerOverride', getUrlParameter('site')]);
+  }
+  ga_.pushCommand(['_trackEvent', 'Embed', getUrlParameter('site')]);
+}
+
+window.santaApp = document.querySelector('santa-app');
+
+// For Portal mode, filter out clicks that don't match the current domain.
+if (window.santaApp.mode == 'portal') {
+  document.body.addEventListener('click', function clickFilter(event) {
+    if (!event.target || event.target.localName != 'a') {
+      return;
+    }
+
+    var url_check = location.protocol + '//' + document.domain;
+    if (event.target.href.search(url_check)) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
+  });
+}
+
+var POLYMER_ANALYTICS_TIMEOUT_ = 60 * 1000;
+
+// log some polymer startup performance numbers
+function perfAnalyticsEvent(eventName, categoryName) {
+  // performance.now() is sadly disabled even in some very recent browsers
+  // TODO(bckenny): for now, only do polymer perf analytics in browsers with it
+  if (window.performance && window.performance.now) {
+    document.addEventListener(eventName, function() {
+      var now = window.performance.now();
+      var variable = eventName;
+      if (now > POLYMER_ANALYTICS_TIMEOUT_) {
+        variable += ' - outliers';
+      }
+      window.ga_.pushCommand(['_trackTiming', categoryName, variable, now]);
+    });
+  }
+}
+perfAnalyticsEvent('HTMLImportsLoaded', 'Polymer');
+perfAnalyticsEvent('WebComponentsReady', 'Polymer');
+
+if (window.DEV) {
+  // Polyfill needs I18nMsg to exist before setting the lang. Timing is fine for native :(
+  // Set locale for entire site (e.g. i18n-msg elements).
+  document.addEventListener('HTMLImportsLoaded', function() {
+    I18nMsg.lang = document.documentElement.lang || 'en';
+    I18nMsg.url = '_messages';
+    Platform.performMicrotaskCheckpoint();
+  });
+}
+
+// Try to only do screen reader stuff on desktop.
+if (window.matchMedia && window.matchMedia('(min-width: 1000px)').matches) {
+  var timer = document.querySelector('#timer');
+
+  document.addEventListener('countdown-timer-tick', function(e) {
+    var currentTime = e.detail.currentTime;
+
+    if (currentTime.diff <= 60 * 1000) {
+      timer.textContent = e.detail.msg;
+    } else if (currentTime.seconds % 10 == 0) { // Only update DOM (and therefore speak text) every 10 seconds.
+      timer.textContent = e.detail.msg;
+    }
+  });
+}
+})();
+</script>
+<script>
+  if (santaApp.mode == 'portal') {
+    /* add spacenav libraries and call spacenav initializer */
+    /* the weird scr + ipt is to avoid issues in html */
+    document.write('<scr' + 'ipt type="text/javascript" src="./third_party/lib/eventemitter2/eventemitter2.min.js"></scr' + 'ipt>');
+    document.write('<scr' + 'ipt type="text/javascript" src="./third_party/lib/roslibjs/roslib.min.js"></scr' + 'ipt>');
+    document.write('<scr' + 'ipt type="text/javascript" src="./third_party/lib/spacenav/spacenav.js"></scr' + 'ipt>');
+  }
+</script>
+
+
+<div id="qq-sendUrl-btn"></div><div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div></body></html>
