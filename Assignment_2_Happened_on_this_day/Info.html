@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="COMP126-16B, Assignment 2"> 
+<meta name="author" content="Yunhao Fu, 1255469">
+<title>Chrysler - More information - New York News</title>
+<script>
+function getRadioButtonValue(RadioButtonsName) {
+ var radio = document.getElementsByName(RadioButtonsName);
+ if(radio!=null) {
+ for(var i=0;i<radio.length;i++) {
+ if(radio[i].checked) {
+ console.log("RadioButton No."+(i+1)+" is checked");
+ return radio[i].value;
+ }
+ }
+ }	
+}
+function toVisit() {	
+ if(getRadioButtonValue('resources')=="Wiki") {
+ console.log("Load wikipedia");
+ window.open("https://en.wikipedia.org/wiki/Chrysler_Building");
+ }
+ else if(getRadioButtonValue('resources')=="Youtube") {
+ console.log("Load YouTube");
+ window.open("https://www.youtube.com/results?search_query=chrysler+building");
+ }
+ else{
+ console.log("No radio button is checked!");
+ }	
+}
+function toPlayVideo() {
+ var e =document.getElementById("newVideo");
+ var url= e.options[e.selectedIndex].value;	
+ document.getElementById("youtube").src=url;
+ console.log("Video play at "+url);
+}
+</script>
+
+</head>
+
+<body>
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/dynamic.css" rel="stylesheet" type="text/css">
+
+<div class="main">
+	<hr style="max-width:95%; color:#000; border:5px solid #000"/>
+	<div id="heading">
+    	<h1 style="font-family: 'Berkshire Swash', cursive; font-size:36px;"> <img src="pics/lace.svg" id="leftLace" alt="leftlace"> &nbsp;&nbsp;&nbsp; New York News &nbsp;&nbsp;&nbsp;<img src="pics/lace.svg" id="rightLace" alt="rightlace"></h1>
+        <hr style="max-width:95%; color:#000;">
+        	<p> <span style="font-family:'Berkshire Swash', cursive; font-size:12px;">New York News</span>-<span style="font-family: 'Lobster', cursive;font-size:12px;"> Every day, every New Yorker</span> <span style="font-family:'Courier New', Courier, monospace; font-size:12px">Tuesday, May 27 1930</span> <span style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:bolder;">Rain, 13&#8451; - 18&#8451; </span></p>
+        <hr style="max-width:95%; color:#000;">  
+  	</div>  
+    <div id="TextBox">
+    	<div id="HeadlineTitle">
+        	<h2 style="color:white;font-family: 'Black Ops One', cursive; font-size:36px;">Headline News</h2>
+        </div>
+        <div id="subTitle">
+        	<h3 style="font-family:'Abril Fatface', cursive;font-size:24px;">Chrysler - New Style in New York Sky</h3>
+        </div>
+        <div id="infoText">
+        	<p>The Chrysler Building was designed by architect <a href="https://en.wikipedia.org/wiki/William_Van_Alen" title="William Van Alen">William Van Alen</a> for a project of <a href="https://en.wikipedia.org/wiki/Walter_P._Chrysler" title="Walter P. Chrysler">Walter P. Chrysler</a>. When the ground breaking occurred on September 19, 1928, there was an intense competition in New York City to build the world's tallest skyscraper. Despite a frantic pace (the building was built at an average rate of four floors per week), no workers died during the construction of this skyscraper.</p>
+        </div>
+        <hr style="margin-top:-15px;">
+        <div id="iframeVideo">
+        	<iframe id="youtube" src="https://www.youtube.com/embed/N8GVquWgVSU" allowfullscreen></iframe>
+        		<div id="videoPlay">
+        			<p style="display:inline;font-family: 'Lustria', serif;">Play videos:</p> 
+            		<form action="null" style="display:inline">
+        				<select id="newVideo">
+            			<option value="https://www.youtube.com/embed/N8GVquWgVSU">(About)The Chrysler Building: Style in the Sky</option>
+            			<option value="https://www.youtube.com/embed/nSlGjRbMfzs">(About)Chrysler Building Seagram Building Comparison</option>
+            			<option value="https://www.youtube.com/embed/emaWdBcUyHs">(Exciting)Climbing to top of Chrysler Building Spire</option>
+        				</select>
+    			</form>
+            		<input type="button" value="Play me" onclick="toPlayVideo()" style="display:inline">
+        		</div>                
+        </div>
+        <div id="relevantLinks">
+        	<p style="display:inline;">Resources: </p>
+        	<p style="display:inline;"><input type="radio" value="Wiki" name="resources">Link to Wikipedia</p>
+            <p style="display:inline;">| <input type="radio" value="Youtube" name="resources">Link to Youtube</p>
+            <input type="button" value="Visit" onclick="toVisit()" style="display:inline">
+            <p><a href="Index.html">Back to Index</a> <a href="Anime.html">Animation</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

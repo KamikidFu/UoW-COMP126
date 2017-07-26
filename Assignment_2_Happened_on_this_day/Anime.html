@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="COMP126-16B, Assignment 2"> 
+<meta name="author" content="Yunhao Fu, 1255469">
+<title>Chrysler - Animation - New York News</title>
+<script>
+	function toPlayAnime(){
+		var e = document.getElementById("anime");
+		e.src="Animation/Animation.html";
+		e.width="550";
+		e.height="400";
+		console.log("Animation Played");
+	}
+</script>
+</head>
+
+<body>
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/dynamic.css" rel="stylesheet" type="text/css">
+
+<div class="main">
+	<hr style="max-width:95%; color:#000; border:5px solid #000"/>
+    <div id="heading">
+    	<h1 style="font-family: 'Berkshire Swash', cursive; font-size:36px;"> <img src="pics/lace.svg" id="leftLace" alt="leftlace"> &nbsp;&nbsp;&nbsp; New York News &nbsp;&nbsp;&nbsp;<img src="pics/lace.svg" id="rightLace" alt="rightlace"></h1>
+        <hr style="max-width:95%; color:#000;">
+        	<p> <span style="font-family:'Berkshire Swash', cursive; font-size:12px;">New York News</span>-<span style="font-family: 'Lobster', cursive;font-size:12px;"> Every day, every New Yorker</span> <span style="font-family:'Courier New', Courier, monospace; font-size:12px">Tuesday, May 27 1930</span> <span style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:bolder;">Rain, 13&#8451; - 18&#8451; </span></p>
+        <hr style="max-width:95%; color:#000;">  
+  	</div> 
+    <div id="animation">
+    	<h2 style="font-family:'Abril Fatface', cursive;font-size:24px; margin-bottom:-1px">Chrysler Building - Animation & Street View</h2>
+    	<iframe id="anime" width="0" height="0" allowfullscreen></iframe>
+        <br>
+        <input type="button" value="Play me" onclick="toPlayAnime()">        
+        <p style="font-family: 'Lustria', serif;"><a href="Index.html">Back to Index</a> <a href="Info.html">Information</a></p>
+    </div>
+</div> 
+</body>
+</html>

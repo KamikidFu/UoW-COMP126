@@ -1,0 +1,54 @@
+	.main{
+		margin:0 auto;
+		max-width:75%;
+		min-width:1005px;
+		height:auto;	
+		border:3px solid #000;
+		background-image:url("../pics/oldNewspaperBackground.jpg");
+	}
+	#leftLace{
+		margin:0 auto;
+		max-width:20%;
+	}
+	#rightLace{
+		margin:0 auto;
+		max-width:20%;
+		-webkit-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+	}
+	#heading{		
+		text-align:center;
+		margin:0 auto;
+		max-width:80%;
+	}
+	#TextBox{
+		margin:0 auto;
+		width:80%;
+		height:auto;
+	}
+	#HeadlineTitle{
+		background-color:black;
+		margin-top:-15px;
+	}
+	#subTitle{		
+		margin-top:-15px;
+	}
+	#infoText{
+		font-family: 'Lustria', serif;
+		margin-top:-15px;
+	}
+	#iframeVideo{
+		text-align:center;
+		margin-top:-10px;
+	}
+	#relevantLinks{
+		font-family: 'Lustria', serif;
+		text-align:center;
+	}	
+	#animation{
+		text-align:center;
+		margin-top:-10px;
+	}

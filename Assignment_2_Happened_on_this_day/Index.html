@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="COMP126-16B, Assignment 2"> 
+<meta name="author" content="Yunhao Fu, 1255469">
+<title>Great Chrysler Building - New York News - May 27, 1930</title>
+<script>
+	var images=[
+		"pics/ChryslerBuilding1.jpg",
+		"pics/ChryslerBuilding2.jpg",
+		"pics/ChryslerBuilding3.jpg"
+	]
+	var num=0;
+	
+	function prev(){
+		var slider = document.getElementById("slider");
+		num--;
+		if(num<0){
+			num=images.length-1;
+		}
+		slider.src=images[num];
+		console.log("Show No."+num+" Picture");
+	}
+	function next(){
+		var slider = document.getElementById("slider");
+		num++;
+		if(num>=images.length){
+			num=0;
+		}
+		slider.src=images[num];
+		console.log("Show No."+num+" Picture");
+	}
+</script>
+</head>
+<body>
+<link href="css/dynamic.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+<div class="main">
+	<hr style="max-width:95%; color:#000; border:5px solid #000"/>
+    <div id="heading">
+    	<h1 style="font-family: 'Berkshire Swash', cursive;"> <img src="pics/lace.svg" id="leftLace" alt="LeftLace"> &nbsp;&nbsp;&nbsp; New York News &nbsp;&nbsp;&nbsp;<img src="pics/lace.svg" id="rightLace" alt="RightLace"></h1>
+        <hr style="max-width:95%; color:#000;">
+        	<p> <span style="font-family:'Berkshire Swash', cursive; font-size:12px;">New York News</span>-<span style="font-family: 'Lobster', cursive;font-size:12px;"> Every day, every New Yorker</span> <span style="font-family:'Courier New', Courier, monospace; font-size:12px">Tuesday, May 27 1930</span> <span style="font-family:'Courier New', Courier, monospace; font-size:12px; font-weight:bolder;">Rain, 13&#8451; - 18&#8451; </span></p>
+        <hr style="max-width:95%; color:#000;">  
+  	</div>  
+      
+  	<div id="TextBox">
+    	<div  id="titleText">        
+            <h2 style="font-family: 'Black Ops One', cursive; text-align:center; font-size:48px; margin-top:-5px; margin-bottom:-25px;">HEADLINE</h2>
+        	<h3 style="font-family:'Abril Fatface', cursive; font-size:24px;margin-bottom:-5px;">Amazing!<br>The topest building in the global.</h3>
+            <p class="news" style="margin-bottom:-5px;">Spectacular! Today, the world topest building, Chrysler, now is standing on our New York City!</p>
+            <p class="news" style="margin-bottom:-5px;">The architect of this building is William Van Alen with David Stravitz and Gerald Hoberman.</p>
+            <p class="news">Totally this building consumed 3,862 windows; 20,961 tons of structural steel, 391,881 rivets, and 3,826,000 bricks.</p>
+            <p class="news">...</p>
+            <div style="text-align:center">
+            <p class="news" style="display:inline;"><a href="info.html">More Information</a></p>
+            <p class="news" style="display:inline">&nbsp;&nbsp;&nbsp;</p>
+            <p class="news" style="display:inline;"><a href="anime.html">Animation</a></p>
+	    <p id="validcss">        		
+    		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        		<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+    		</a>
+	    </p>
+            </div>
+        </div>
+		<div id="mainPic">        	
+          <img id="slider" alt="PicturesSlider" src="pics/ChryslerBuilding1.jpg" style="max-width:50%; max-height:auto">
+          <br>
+          <div id="buttons">
+          <button id="goPrevious" style="width:80px; text-align:center" onClick="prev()">Previous</button>
+          <button id="goNext" style="width:80px; text-align:center" onClick="next()">Next</button>
+          </div>
+        </div>     
+    </div>
+</div>
+</body>
+</html>
