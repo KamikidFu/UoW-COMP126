@@ -1,0 +1,47 @@
+#pic1:hover{
+	-webkit-transform: scale(2) translate(750px,100px);
+	transform: scale(2) translate(750px,100px);
+}
+
+#pic2:hover{
+	-webkit-transform: translate(200px,200px);
+	transform: translate(200px,200px);
+}
+
+#pic3:hover{
+	float:right;
+	transform:translateY(400px);
+}
+
+#pic1
+{
+	-webkit-transform: rotate(180deg);	
+	transform: rotate(180deg);	
+}
+
+#pic2
+{
+	-webkit-transform:rotateX(180deg);
+	transform:rotateX(180deg);
+}
+
+#pic3
+{
+	-webkit-transform:rotateY(180deg);
+	transform:rotateY(180deg);
+}
+
+#pic4
+{
+	-webkit-transform:rotateX(180deg) rotate(45deg);
+}
+
+#pic5
+{
+	-webkit-transform: translate(1000px,100px) skewX(-60deg) rotate(-60deg)
+}
+
+#pic6
+{
+	-webkit-transform:rotateX(180deg) skewX(30deg);
+}

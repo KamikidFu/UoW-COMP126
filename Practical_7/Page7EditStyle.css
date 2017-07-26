@@ -1,0 +1,14 @@
+#firstPic{
+	-webkit-transform: scale(2) translate(750px,100px);
+	transform: scale(2) translate(750px,100px);
+}
+
+#secondPic{
+	-webkit-transform: translate(200px,200px);
+	transform: translate(200px,200px);
+}
+
+#thirdPic{
+	float:right;
+	transform:translateY(400px);
+}

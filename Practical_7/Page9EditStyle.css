@@ -1,0 +1,13 @@
+@keyframes slide_in {
+0% {
+margin-left: -400px;
+}
+100% {
+margin-left: 0px;
+}
+}
+
+#pic {
+animation-name: slide_in;
+animation-duration: 3s;
+}

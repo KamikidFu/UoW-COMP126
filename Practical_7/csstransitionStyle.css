@@ -1,0 +1,10 @@
+#pic:hover
+{
+	-webkit-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+
+#pic
+{
+	transition: transform 3s ease 0s;
+}
