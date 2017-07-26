@@ -1,0 +1,17 @@
+
+p.thick
+{ 	/*NOT WORK!?*/
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14pt;
+	font-weight:bold;
+}
+h1.normal
+{
+	font-family: Tahoma;
+	font-style:italic;
+	font-size: 18pt;
+	font-weight:normal;	
+}
+p#2ndParagraph{font-size:32pt; font-family:"Lucida Console", Monaco, monospace;}
+body#homePage p{font-size:12pt; font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
+#spanWord{background-color:Yellow;}
